@@ -1,0 +1,48 @@
+<!-- WEBGL -->
+        <div class="webgl-wrapper">
+          <div class="aspect"></div>
+          <div class="webgl-content">
+            <div id="unityContainer">
+              <canvas id="unity-canvas" style="background: #231F20"></canvas>
+            </div>
+          </div>
+        </div>
+      <!-- WEBGL -->
+          
+      <!-- INFO  -->
+        <div class="info">
+          <p>unity webgl responsive</p>
+          <p>press F or <a href="#" onclick="myGameInstance.SetFullscreen(1)">click here</a> to toggle fullscreen</p>
+        </div>
+          
+      <!-- MYLOADER JS -->
+        <script src="{{site.baseurl}}/assets/js/MyLoader.js"></script>
+        <script>
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "{{site.baseurl}}/assets/files/MnemonicMaker2D-Responsive/Build/MnemonicMaker2D-Responsive.data",
+            frameworkUrl: "{{site.baseurl}}/assets/files/MnemonicMaker2D-Responsive/Build/MnemonicMaker2D-Responsive.framework.js",
+            codeUrl: "{{site.baseurl}}/assets/files/MnemonicMaker2D-Responsive/Build/MnemonicMaker2D-Responsive.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "KarakasisChristos",
+            productName: "Mnemonic Maker 2D",
+            productVersion: "1.0",
+          }).then((unityInstance) => {
+            myGameInstance = unityInstance;
+          });
+        </script>
+
+        <!-- check for F key press to toggle full screen -->
+        <script>
+          var isFullscreen = false;
+
+          document.addEventListener('keydown', function(event) {
+              if (event.which === 70) {
+                  if (!isFullscreen) {
+                    myGameInstance.SetFullscreen(1);
+                  } else {
+                    myGameInstance.SetFullscreen(0);
+                  }
+                  isFullscreen = !isFullscreen;
+              }
+          });
+        </script>
