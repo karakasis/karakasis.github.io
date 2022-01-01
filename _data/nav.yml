@@ -5,3 +5,5 @@ list:
     url: MnemonicMaker2D
   - title: About
     url: about
+  - title: TestGame
+    url: test_game
