@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\all_collections",
+    "\\all_collections\\_posts",
+    "\\assets",
+    "\\assets\\css",
+    "\\assets\\files",
+    "\\assets\\files\\MnemonicMaker2D",
+    "\\assets\\files\\MnemonicMaker2D\\TemplateData",
+    "\\_data",
+    "\\_layouts"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\assets\\files\\MnemonicMaker2D\\index.html",
   "PreviewInSolutionExplorer": false
 }
