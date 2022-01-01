@@ -7,3 +7,6 @@ list:
     url: about
   - title: TestGame
     url: test_game
+  - title: TestDupeAbout
+    url: test_about
+    
