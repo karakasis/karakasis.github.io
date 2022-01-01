@@ -1,8 +1,7 @@
 list:
   - title: Home
     url: ""
+  - title: Mnemonic Maker 2D
+    url: MnemonicMaker2D
   - title: About
     url: about
-  - title: Feed
-    url: feed.xml
-    target: "_blank"
