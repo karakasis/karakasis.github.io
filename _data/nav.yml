@@ -2,11 +2,6 @@ list:
   - title: Home
     url: ""
   - title: Mnemonic Maker 2D
-    url: MnemonicMaker2D
+    url: mnemonic_maker_2d
   - title: About
     url: about
-  - title: TestGame
-    url: test_game
-  - title: TestDupeAbout
-    url: test_about
-    
