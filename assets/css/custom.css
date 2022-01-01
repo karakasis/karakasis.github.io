@@ -55,6 +55,7 @@ main {
 }
 
 .content a {
+    color: #ccc;
 	text-decoration: underline;
 }
 
