@@ -7,7 +7,7 @@
     <div id="page">
       <style>
         .title {
-          padding: 5%;
+          padding: 7%;
           color: #101417;
           font-size: 18px;
           font-weight: bold;
@@ -22,10 +22,26 @@
       {% include nav.html %}
       <!-- page content -->
       <main class="content">
-        <p class="title">
-          {{page.title}}
-        </p>
-        {{content}}
+          
+        <div class="BoxTitle">
+            <p class="title">
+              {{page.title}}
+            </p>
+        </div>
+          <!-- WEBGL -->
+        <div class="webgl-wrapper">
+          <div class="aspect"></div>
+          <div class="webgl-content">
+            <div id="unityContainer">
+              <canvas id="unity-canvas" style="background: #231F20"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- WEBGL -->
+
+        <!-- INFO  -->
+        <p>Press F or <a href="#" onclick="myGameInstance.SetFullscreen(1)">click here</a> to toggle fullscreen</p>
+
           <!-- MYLOADER JS -->
         <script src="{{site.baseurl}}/assets/js/MyLoader.js"></script>
         <script>
@@ -41,7 +57,23 @@
             myGameInstance = unityInstance;
           });
         </script>
+        <!-- check for F key press to toggle full screen -->
+        <script>
+          var isFullscreen = false;
 
+          document.addEventListener('keydown', function(event) {
+              if (event.which === 70) {
+                  if (!isFullscreen) {
+                    myGameInstance.SetFullscreen(1);
+                  } else {
+                    myGameInstance.SetFullscreen(0);
+                  }
+                  isFullscreen = !isFullscreen;
+              }
+          });
+        </script>
+          
+        {{content}}
       </main>
 
       <!-- footer -->
