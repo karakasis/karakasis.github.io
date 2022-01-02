@@ -2,18 +2,4 @@
 ---
 @import "youtube_special";
 
-/**
- * Grid styles
- */
-.video-grid.front-page {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1em 2em;
-}
 
-ul.video-list {
-  display: flexbox;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}

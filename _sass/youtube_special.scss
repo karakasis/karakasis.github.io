@@ -1,102 +1,131 @@
+$purple: #f0b53b;
 
-li.video {
-  flex-grow: 1;
-  position: relative;
-  ooverflow: hidden;
-	width: 33.333333333%;
-	width: -webkit-calc(100% / 3);
-	width: calc(100% / 3);
-  border: solid 0.2em transparent;
-  
-  & a {
-    outline: none;
+#video {
+  position: absolute;
+  top:calc(50% - 30px);
+  left:calc(20% - 100px);
+  height: 60px;
+  width: 200px;
+  line-height: 60px;
+  border-radius:100px;
+  background: #fff;
+  border: 2px solid $purple;
+  color:$purple;
+  outline:none;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:14px;
+    weight:bold;
   }
-      
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: $purple;
+  }
+  &:active {
+    letter-spacing: 2px ;
+  }
+  &:after {
+    content:"Practice showcase";
+  }
+}
+
+#video2 {
+  position: absolute;
+  top:calc(50% - 30px);
+  left:calc(80% - 100px);
+  height: 60px;
+  width: 200px;
+  line-height: 60px;
+  border-radius:100px;
+  background: #fff;
+  border: 2px solid $purple;
+  color:$purple;
+  outline:none;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:14px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: $purple;
+  }
+  &:active {
+    letter-spacing: 2px ;
+  }
+  &:after {
+    content:"Normal showcase";
+  }
+}
+
+.overly {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0);
-    transition: background-color .15s;
-  }
-  
-  & figure {
-    display: block;
+    z-index: 999;
+    background: rgba(0,0,0,0.8);
+}
+.screen {
     position: relative;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    
-    & img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      opacity: 0;
-      transform: scale(0.5);
-      transition: all .20s;
-    }
-
-    & figcaption {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      font-size: 1.4rem;
-      font-weight: 600;
-      padding: 1rem;
-      transform: translateY(0);
-      opacity: 1;
-      transition: all .20s;
-    }
-  }
-  
-  &:hover {
-    & figure {
-      & img {
-        opacity: 1;
-        transform: scale(1);
-      }
-      
-      & figcaption {
-        opacity: 0;
-        transform: translateY(50%);
-      }
-    }
-  }
-  
-  &:hover:before {
-    background-color: rgba(0,0,0,0.3);
-  }
+    display: block;
+    width: 800px;
+    min-height: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #000;
+    border-radius:10px;
+    background: #000;
+    text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-	li.video {
-		width: 50%;
-		width: -webkit-calc(100% / 2);
-		width: calc(100% / 2);
-	}
-}
+.close {
+    $size: 30px;
+    height: $size;
+    width: $size;
+    padding-top:5px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: $size;
+    cursor: pointer;
+    &:before, &:after {
+        $width: 30px;
+        $height: 6px;
+        transform: rotate(-45deg);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -$height/2;
+        margin-left: -$width/2;
+        display: block;
+        height: $height;
+        width: $width;
+        background-color: #333;
+        transition: all 0.25s ease-out;
+    }
 
-@media screen and (max-width: 640px) {
-	li.video {
-		width: 100%;
-	}
-}
+    &:after {
+        transform: rotate(-135deg);
+    }
 
-/**
- * Pen styles
- */
-html { box-sizing: border-box; height: 100%; overflow-y: scroll; font-size: 62.5%; }
-*, *:before, *:after { box-sizing: inherit; }
+    &:hover {
 
-article {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1em 2em;
+        &:before, &:after {
+            transform: rotate(0deg);
+        }
+    }
 }

@@ -1,0 +1,48 @@
+<script>
+var vmarkup = [
+    '<div class="overly">',
+    '<div class="screen">',
+    '<iframe width="800" height="450" src="#" frameborder="0" allowfullscreen></iframe>',
+    '<div class="close"><div>',
+    '</div></div>'].join('');
+
+	$("#video").click(function () {
+
+	    $(this).addClass("active");
+
+	    var thisThumb = $(this);
+
+	    $(vmarkup).hide().appendTo('body').fadeIn();
+	    
+	    //get Youtube embed code
+	    function getId(url) {
+	        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+	        var match = url.match(regExp);
+	    
+	        if (match && match[2].length == 11) {
+	            return match[2];
+	        } else {
+	            return 'error';
+	        }
+	    }
+	    
+	    var vlink = $(this).attr("href");
+	    var vedioID = '//www.youtube.com/embed/' + getId(vlink);
+	    $(".screen").find("iframe").attr({ src: vedioID });
+
+	    // close effect
+	    $(".overly").click(function () {
+	        $(this).fadeOut();
+	        thisThumb.removeClass("active");
+	    });    
+	    $(".screen").click(function (e) {
+	        e.stopPropagation();
+	    });    
+	    $(".screen .close").click(function () {
+	        $(".overly").fadeOut();
+	        thisThumb.removeClass("active")
+	    });
+	    
+	    return false;
+	});
+</script>
