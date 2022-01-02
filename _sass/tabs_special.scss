@@ -21,11 +21,6 @@ $separator-height: 0.188rem; //3px
   }
 }
 
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-
 /* Makes the checkbox hack work for Android 4.1.2 */
 @-webkit-keyframes checkbox-hack-bugfix { 
   from {padding:0;} 
