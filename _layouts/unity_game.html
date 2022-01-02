@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  {% include unity.html %}
   {% include fullscreen.html %}
   <body>
     <div id="indicator"></div>
@@ -27,6 +26,22 @@
           {{page.title}}
         </p>
         {{content}}
+          <!-- MYLOADER JS -->
+        <script src="{{site.baseurl}}/assets/js/MyLoader.js"></script>
+        <script>
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "{{site.baseurl}}/assets/files/MnemonicMaker2D-Responsive/Build/MnemonicMaker2D-Responsive.data",
+            frameworkUrl: "{{site.baseurl}}/assets/files/MnemonicMaker2D-Responsive/Build/MnemonicMaker2D-Responsive.framework.js",
+            codeUrl: "{{site.baseurl}}/assets/files/MnemonicMaker2D-Responsive/Build/MnemonicMaker2D-Responsive.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "KarakasisChristos",
+            productName: "Mnemonic Maker 2D",
+            productVersion: "1.0",
+          }).then((unityInstance) => {
+            myGameInstance = unityInstance;
+          });
+        </script>
+
       </main>
 
       <!-- footer -->
