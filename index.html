@@ -1,8 +1,145 @@
 ---
-title: Blog
-layout: collections_layout
+title: Mnemonic Maker 2D v2 
+layout: unity_game
 ---
+<div class="wrapper">
+  
+  <div class="tabs-panel">
 
-{% for post in site.posts %}
-<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-{%endfor%}
+     <!-- Input Tabs -->
+    <input type="radio" id="test1" name="tab" checked="checked" />
+    <input type="radio" id="test2" name="tab" />
+    <input type="radio" id="test3" name="tab" />
+    <input type="radio" id="test4" name="tab" />
+    <input type="radio" id="test5" name="tab" />
+    <!-- End Input Tabs -->
+
+    <!-- Start Tabs -->
+    <div class="tabs">
+      <div class="tab">
+        <label for="test1" onclick>
+          <div class="content">
+            <div class="text">The concept behind the game</div>
+          </div>
+        </label>
+      </div>
+      <div class="tab">
+        <label for="test2" onclick>
+          <div class="content">
+            <div class="text">First steps and setup</div>
+          </div>
+        </label>
+      </div>
+      <div class="tab">
+        <label for="test3" onclick>
+          <div class="content">
+            <div class="text">Practice Mode</div>
+          </div>
+        </label>
+      </div>
+      <div class="tab">
+        <label for="test4" onclick>
+          <div class="content">
+            <div class="text">Normal Mode</div>
+          </div>
+        </label>
+      </div>
+      <div class="tab">
+        <label for="test5" onclick>
+          <div class="content">
+            <div class="text">Showcase YouTube videos</div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <!-- End Tabs -->
+
+    <div class="separator"></div>
+
+    <!-- Start Panels -->
+    <div class="panels">
+
+      <!-- Start Tab Panel -->
+      <div class="tab-panel" id="panel1">
+        <div class="content">
+         If you have ever played a game with a static environment, whether that’s an open world game or a level based game, with a moderate amount of difficulty, you have probably stumbled on the same area or level a few times. There are times where a certain area is so difficult to beat or progress from, that you catch yourself trying to memorize the location of the enemies or patterns within that area in order to find a strategy to beat your current objective. Alternatively, its not uncommon for someone to replay a game that they finished in their childhood and realize that they know certain areas or aspects of the game like the back of their palm. This can often be described as muscle memory or flashbacks that were buried in our memory until a stimulus triggered by the environment brings back that memory.<br>Another application of this can be seen in games like Pokemon, Zelda, Mario or newer titles like Dark Souls, Skyrim or The Witcher, where you have memorized where to find items, quest givers, exits for dungeons or even pixels in the ground where you have to jump in order to reach a platform. All of the aforementioned have a common axis where they intersect, and that is memory, which proves that through repeated interaction with an entity you become accustomed to it and able to recall actions that you made in a previous time.
+        </div>
+      </div>
+      <!-- End Tab Panel -->
+
+      <!-- Start Tab Panel -->
+      <div class="tab-panel" id="panel2">
+        <div class="content">
+            If the game does not load, try refreshing the browser and wait for a few seconds for the Unity logo to appear. You can also <a href="https://github.com/karakasis/MnemonicMaker2D/releases" target="_blank">download</a> and play the game in Windows if you are having trouble with the browser. If the game is lagging in the browser, open the browser settings and search for Hardware Acceleration, then play around with the setting and see if that fixes the lag.<br>
+            During the introduction screen, you will be presented with 3 options.<br> 
+            If you just want to try the game without going over the evaluation process, then select the 3rd option and skip to "I am just trying the game out" section.<br>
+            If your goal is to evaluate this game and are willing to spent the required amount of time and this is the first time you are running the game, then you will need to select the 2nd option.<br>
+            If you are evaluating the game but you have already completed the first section of practice mode, then you should move to the 1st option. Head to the "Practice mode" tab for more instructions.<br>
+            
+            <h4> I am just trying the game out</h4>
+            Welcome, when playing the demo mode, you will be automatically given a secret phrase of 12 words. In order to find the secret phrase, you will need to collect the 12 items in the order that is displayed in the Pathfind tool. Once you are able to control your character, you can interact with the Pathfind tool by pressing 'P' or using the button on the top-left corner.<br>
+            You can click each button to get directions of where the item is and once you find it, you can collect it by pressing 'E'. Make sure to select the color of the item as displayed in the Pathfind tool. Once you have collected all 12 items, a small key button will appear to the bottom of the screen. Click that, and select Extract to find your secret phrase! You can opt to fill out the <a href="https://forms.gle/S6pYAPqG9b3c73mW6" target="_blank">first Google Form</a>, if you haven't done already. Thank you for trying the game.
+            <br>
+            If you would like to continue testing, <u>write down the secret phrase</u> and restart the game, by refreshing your browser and select the 1st option this time. When playing in the normal mode, the Pathfind tool will be de-activated, and you will have to find the same items as before, this time using only your memory. Once you have collected 12 items, the key will again appear to show you the secret phrase. If the phrase matches the one, you wrote down then you have successfully completed the game. , and also opt to complete the <a href="" target="_blank">second Google Form</a> with questions tied to the game you played directly. Thank you.
+            
+            
+        </div>
+      </div>
+      <!-- End Tab Panel -->
+
+      <!-- Start Tab Panel -->
+      <div class="tab-panel" id="panel3">
+        <div class="content">
+            Welcome, and thank you for taking the time to evaluate this game.<br>
+            During practice mode you will be assisted in-game in order to find the items needed to recreate your recovery phrase. If you don't have a recovery phrase, you can use <a href="https://iancoleman.io/bip39/" target="_blank">Mnemonic Code Converter</a> to generate a unique phrase as if you had a Crypto Wallet. Select 12 words in the dropdown window, next to GENERATE button, then click the button to get a phrase in the "BIP39 Mnemonic" text area.<br>
+            Once you select the 2nd option in the introduction screen of the game, you will be asked to input your recovery phrase. After doing so you can continue on by click the green button on the top-right corner. <u>Please take the appropriate measures to secure your phrase</u>, since you will have to use the same phrase for the next days.<br>
+            When playing the game your task is to collect the 12 items in the order that is displayed in the Pathfind tool. You can interact with the Pathfind tool by pressing 'P' or using the button on the top-left corner.<br>
+            You can click each button to get directions of where the item is and once you find it, you can collect it by pressing 'E'. Make sure to select the color of the item as displayed in the Pathfind tool. Once you have collected all 12 items, a small key button will appear to the bottom of the screen. Click that, and select Extract to find your recovery phrase! <br>
+            If this is your first day of evaluating the game, then please make sure that you remember the location of all the items you collected, as well as the order, the color and the time of day you collected it. Everything is important in order to recreate your unique recovery phrase. It is advised to spent up to 2 hours playing in the practice mode using the same recovery phrase until you are somewhat comfortable with the route.<br>
+            If this your second or third day of evaluation, then you probably already have a basic route in mind, so please take 10-15 minutes to do a run in practice mode and try not to use the Pathfind tool, unless you are stuck on an item.<br>
+            On the third day of evaluation, after doing a practice run, restart the browser and this time select the 1st option in the introduction screen. Then head to the "Normal Mode" tab to finalize and fill out the second Form.
+            You can opt to fill out the <a href="https://forms.gle/S6pYAPqG9b3c73mW6" target="_blank">first Google Form</a>, if you haven't done already.
+        </div>
+      </div>
+      <!-- End Tab Panel -->
+
+      <!-- Start Tab Panel -->
+      <div class="tab-panel" id="panel4">
+        <div class="content">
+            If you are attempting normal mode, then you probably have followed the instructions correctly, and are on the third day of evaluation. Congratulations. <br>
+            This time, you will have to collect the 12 items, using the route you have made over the past two days, and without the help of the Pathfind tool. When you collect all 12 items, the key button will appear, showing the recovery phrase you created. At this point you should have saved somewhere the correct recovery phrase, and are able to check if it matches. <br> 
+            In case you have the wrong phrase extracted, you can try to reorder the items in your inventory or possibly collect a different one, if you feel like you forgot something. This interaction is important in evaluating how this game can work as a secondary tool to help you memorize your route/phrase. If you failed to extract the correct phrase please make sure to report it in your Google Form response. <br>
+            You can now finalize your evaluation of the game, by answering a few more questions in the <a href="" target="_blank">second Google Form</a>. Thank you.
+            
+        </div>
+      </div>
+      <!-- End Tab Panel -->
+
+      <!-- Start Tab Panel -->
+      <div class="tab-panel" id="panel5">
+        <div class="content">
+          <p>In the 2 YouTube videos below, you can see a showcase of the game using both modes. In the first video I will be entering my mnemonic phrase, that I want to memorize in game. For the purpose of demonstration I will be getting a random mnemonic phrase of 12 words generated from <a href="https://iancoleman.io/bip39/" target="_blank">Mnemonic Code Converter</a>. Then I will be utilizing the Pathfinding tool inside the game, along side the game map to find the locations of the items that recreate my mnemonic phrase. After the recording of the first video, I spent some time repeating the process until I felt comfortable enough to throw away my mnemonic phrase, leaving me only the option to recreate my mnemonic through playing the game on the normal mode. In the second video (make sure to enable subtitles since I will be going over my actions in my native language), I am starting over this time selecting normal game mode, in which the game itself has no recollection of who I am or what my mnemonic might be. The game world is set and static for every user and will always remain the same and there is no data saved locally from previous attempts. In the normal game mode, the player is allowed to collect whichever item he wishes, and only when every slot in the inventory is filled, then the player has the option to extract a mnemonic phrase based on which items were collected, as well as the order that they were collected. As showcased in the second video, I was able to find all the items without the assistance of the game, purely using my memory and tricks that helped me remember the location and order of my items. The process of collecting the items in normal mode took approximatelly 7 minutes.</p>
+
+            <div class="flex-container">
+                <div class="flex-child">
+                    
+                    <h2>Assisted routing of a random mnemonic</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6Y4zDnOVg1w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                  </div>
+                  <div class="flex-child">
+                      
+                        <h2>Unassisted item collection</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Y4zDnOVg1w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+            </div>
+        </div>
+      </div>
+      <!-- End Tab Panel -->
+
+    </div>
+    <!-- End Panels -->
+
+  </div>
+
+</div>
