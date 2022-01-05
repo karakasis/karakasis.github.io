@@ -73,7 +73,7 @@ input[type="radio"] {
   
   .tabs {
     display: flex;
-
+      
     .tab {
       -webkit-box-flex :1;
       -webkit-flex     :1;
@@ -88,7 +88,6 @@ input[type="radio"] {
       margin-top: 2.5rem; //40px
       margin-right: 0; //50px
       text-align: center;
-      color: #707a89;
       background-color: transparent;
       cursor: pointer;
       transition: 
@@ -112,8 +111,9 @@ input[type="radio"] {
           .text {
             margin-top: 2rem;
             margin-bottom: 1rem;
-            font-family: 'Ubuntu', 'Myriad Pro', sans-serif;
+            font-family: monospace;
             font-size: 0.875rem;
+            color: #A79E8B;
           }
         }
         
@@ -131,7 +131,7 @@ input[type="radio"] {
         }
       }
 
-      &:hover {
+      &:hover .text {
         color: #f0b53b;
       }
     }
@@ -151,7 +151,6 @@ input[type="radio"] {
       
       
       .content {
-        font-family: 'Ubuntu', 'Myriad Pro', sans-serif;
         color: #707a89;
         animation: fade 0.3s linear;
         margin-left:5%;

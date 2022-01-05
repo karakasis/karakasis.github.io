@@ -4,7 +4,7 @@
 
 .flex-child {
     flex: 1;
-    border: 2px solid yellow;
+    border: 0px solid yellow;
 }  
 
 .flex-child:first-child {

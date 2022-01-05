@@ -4,7 +4,7 @@
     --theme-color: #f0b53b;
 }
 body {
-	color: rgb(167, 158, 139) !important;
+	
 }
 
 img {
@@ -56,6 +56,7 @@ main {
 	display: grid;
 	grid-gap: 1.4rem;
 	line-height: 1.5rem;
+    color: #A79E8B;
 }
 
 .content a {
