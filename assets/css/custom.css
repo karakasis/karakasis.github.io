@@ -12,7 +12,9 @@ img {
 }
 
 .BoxTitle {
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
+    width: 60%;
+    margin-left: 22%;
 }
 /* header */
 
