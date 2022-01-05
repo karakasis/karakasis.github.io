@@ -112,7 +112,7 @@ input[type="radio"] {
             margin-top: 2rem;
             margin-bottom: 1rem;
             font-family: monospace;
-            font-size: 0.875rem;
+            font-size: 1rem;
             color: #A79E8B;
           }
         }
@@ -155,6 +155,8 @@ input[type="radio"] {
         animation: fade 0.3s linear;
         margin-left:5%;
         margin-right:5%;
+        letter-spacing: 1px !important;
+        line-height: 1.5 !important;
       }
     }
   }
